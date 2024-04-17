@@ -619,11 +619,11 @@ int main()
 
   - ALU(bộ xử lý tính toán), Register (thanh ghi), RAM (cấu trúc vi xử lý gồm RAM và Register)
 
-    ![Register](./images/bai4_Register.PNG)
+    ![Register](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/bai4_Register.png?raw=true)
 
     **vidu**: int a = 5; a++;
   
-    ![Register](./images/bai4_Register1.PNG)
+    ![Register](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/bai4_Register1.png?raw=true)
 
     - vì Register có bộ nhớ giới hạn nên chỉ ưu tiên dùng Register cho những biến cần tốc độ xử lý cao, còn lại tất cả được lưu trên RAM.
 
