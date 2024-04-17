@@ -13,7 +13,9 @@ Quy trình biên dịch là quá trình chuyển đổi từ ngôn ngữ bậc c
 - Giai đoạn dịch asembly sang ngôn ngữ máy (Asember)
 - Giai đoạn liên kết (Linker)
 
-    ![compiler](./images/process_compiler.PNG)
+
+    ![compiler](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/process_compiler.png)
+
 
 
 - Cấu trúc của một chương trình:
