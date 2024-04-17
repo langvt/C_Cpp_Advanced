@@ -15,9 +15,10 @@ Quy trình biên dịch là quá trình chuyển đổi từ ngôn ngữ bậc c
 
 ![compiler](./images/process_compiler.PNG)
 
+
 - Cấu trúc của một chương trình:
 
-'''
+	```C
 
     #include<stdio.h> (thư viện, có thể là một file khác với include"file1")
 
@@ -33,7 +34,9 @@ Quy trình biên dịch là quá trình chuyển đổi từ ngôn ngữ bậc c
             return 0;
         }
     }
-'''
+
+
+```C
 
 **_Pre-processor (Giai đoạn tiền xử lý):_**
 - 1 Project có nhiều file:`a.h, b.h, a.c, b.c `và file `main.c` sau quá trình tiền xử lý thành 1 file duy nhất là file `main.i`.
