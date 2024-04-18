@@ -1666,7 +1666,7 @@ Nhược điểm: thời gian truy cập tuyến tính vì không phải là cá
 
 Gồm 2 phần: dữ liệu bài toán và một tham chiếu (hay liên kết) lưu địa chỉ tới các phần tử đứng sau kế tiếp
 
-![Linklist](./images/bai10_linkList.PNG)
+![Linklist](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/bai10_linkList.png?raw=true)
 
 
 - Dùng trong các bài toán thao tác với mảng:Thêm, xóa, chèn ....phần tử vào mảng.
@@ -1715,8 +1715,8 @@ Next của phần tử cuối cùng bao giờ cũng trỏ vào NULL.
 ##### hàm duyệt:
 
             void duyet (node *head){ 
-                while(p->next != NULL){
-                printf("%d", node -> value)
+                while(head->next != NULL){
+                printf("%d", head -> value)
                     head = head->next;
                 }
             }
@@ -1730,13 +1730,15 @@ Next của phần tử cuối cùng bao giờ cũng trỏ vào NULL.
  
 -  do hàm này làm thay đổi DSLK nên phải sử dụng truyền tham chiếu hoặc truyền con trỏ.
 
-        void pushFront (**head, uint8_t value){
+        void pushFront (node **head, uint8_t value){
             node *newnode;
             newnode = createNode(value);
         //bước1: cho next của newnode trỏ vào node head hiện tại 
-            newnode -> next = *head;  //*head là địa chỉ của node head
+            newnode -> next = *head;  
+            
+            //*head là giá trị của con trỏ head(tức là địa chỉ của con trỏ head trỏ tới)
         //bước2: cập nhật node head bằng newnode
-            *head = newnod;
+            *head = newnode;
         }
 
 #### d.Thêm từng node vào DSLK
