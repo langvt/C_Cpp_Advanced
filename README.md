@@ -686,8 +686,8 @@ int main()
 
 
 **vidu**: 
-'''
 
+```C
     int a; (.bss)
     int b = 42; (.data)
 
@@ -697,7 +697,8 @@ int main()
         a=10;
         cong(a,b);
     }
-'''
+
+ ```
 ==> sections
 
   <details>
@@ -959,13 +960,13 @@ void free(void* ptr);
     + Các lần quét tiếp theo tương tự
 ## Ví dụ:
 
-![Struct](./images/Struct1.PNG)
+![Struct](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/Struct1.png?raw=true)
 -   Tổng Example là 8 byte , 7 byte dữ liệu + 1 byte trống 
 
-![Struct](./images/Struct2.PNG)
+![Struct](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/struct2.png?raw=true)
 - Tổng Example là 12 byte ,  7 byte dữ liệu + 5 byte trống
 
-![Struct](./images/Struct3.PNG)
+![Struct](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/struct3.png?raw=true)
 - Tổng Example là 24 byte ,cơ bản là tốn time tính
 
 ##Và mục đích tính toán struct,để tối ưu bộ nhớ,nếu sắp xếp các phần tử không hợp lý sẽ tốn bộ nhớ.
