@@ -943,6 +943,8 @@ void free(void* ptr);
 - Struct là một kiểu dữ liệu chứa nhiều kiểu dữ liệu khác trong nó , kích thước của struct bằng kích thước các thành viên bên trong + phần padding.
 - Struct padding :
 	+ Data alignment:Việc thao tác các biến có địa chỉ liền kề là 1 số lẻ là phức tạp , nên CPU luôn thao tác các địa chỉ là số chẵn >> Data alignment là việc 	sắp xếp data sao cho địa chỉ của các biến luôn là số chẵn và phù hợp với hệ thống.
+
+    Trên một số kiến trúc máy tính, truy cập đến các địa chỉ bộ nhớ số chẵn có thể nhanh hơn so với các địa chỉ số lẻ. Các cấu trúc dữ liệu và thuật toán truy cập dữ liệu thường được thiết kế để tối ưu hóa hiệu suất khi truy cập đến các địa chỉ bộ nhớ có vị trí là số chẵn.
 	+ Data padding: là thêm các vùng nhớ đệm để có địa chỉ chẵn
 
 ## Kích thước của Struct (sizeof)
@@ -969,7 +971,7 @@ void free(void* ptr);
 ![Struct](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/struct3.png?raw=true)
 - Tổng Example là 24 byte ,cơ bản là tốn time tính
 
-##Và mục đích tính toán struct,để tối ưu bộ nhớ,nếu sắp xếp các phần tử không hợp lý sẽ tốn bộ nhớ.
+## Và mục đích tính toán struct,để tối ưu bộ nhớ,nếu sắp xếp các phần tử không hợp lý sẽ tốn bộ nhớ.
 
   </details>
 
@@ -1055,14 +1057,14 @@ int main() {
 
 </details>
 
-![union](./images/Union.PNG)
+![union](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/Union.png?raw=true)
 - Tổng Example là 20 byte , thằng nào lớn nhất thì lấy thằng đó
 
 #### Mục đích sử dụng  Union ,để tiết kiệm bộ nhớ ,vì 1 thời điểm chỉ có thể sử dụng 1 member. 
 - Ứng dụng đọc 1 cảm biến trong nhiều cảm biến.
 - Nếu cùng 1 mục đích mà sử dụng struct sẽ tốn nhiều dung lượng hơn.
 
-![union](./images/Union1.PNG)
+![union](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/Union1.png?raw=true)
 - Ví dụ trên nếu dùng struct thì 8 byte , trong khi union chỉ 4 byte
 
   </details>
