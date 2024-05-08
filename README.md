@@ -2356,7 +2356,7 @@ Cơ cấu của hàng đợi là vào ở một đầu, ra ở một đầu, ph�
 
 Hàng đợi còn được gọi là danh sách kiểu FIFO(First In First Out)
 
-![queue](image-1.png)
+![queue](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/bai12_queue.png?raw=true)
 
 **Các Phép Toán Cơ Bản trên Hàng Đợi**
 
@@ -2380,7 +2380,7 @@ Hàng đợi còn được gọi là danh sách kiểu FIFO(First In First Out)
 - biến thể của queue: 
     + có hai trường hợp queue rỗng: front = rear = -1(khi chưa gán data), rear = front(khi lấy hết data)
 
-  ![queue](image-2.png)
+  ![queue](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/queue1.png?raw=true)
    ![queue](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/queue2.png?raw=true)
 
    <details>
