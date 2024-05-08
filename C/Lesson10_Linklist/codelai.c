@@ -39,5 +39,6 @@ int main(int argc, char const *argv[])
     push_back(&array,6);
     push_back(&array, 4);
     push_back(&array, 7);
+    
     return 0;
 }

@@ -2079,9 +2079,12 @@ vidu:  ptr = (uint8_t*)realloc(ptr, sizeof(uint8_t)*8 );
 
 Ngăn xếp (STACK) là một danh sách tuyến tính, trong đó cho phép thêm và loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở một đầu gọi là đỉnh (top).
 
-![Linklist](./images/bai11_stack.PNG)
 
-**Các Phép Toán Cơ Bản trên Ngăn Xếp**
+![stack](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/bai11_stack.png?raw=true)
+
+
+
+**Các Phép Toán Cơ Bản trên Ngăn Xếp** 
 
 - push(): Chèn một phần tử vào ngăn xếp.
 - pop(): Loại bỏ một phần tử khỏi ngăn xếp.
@@ -2100,7 +2103,7 @@ Ngăn xếp (STACK) là một danh sách tuyến tính, trong đó cho phép th�
 - Trước khi đẩy, ta kiểm tra xem ngăn xếp đã đầy chưa.
 - Trước khi lấy ra, ta kiểm tra xem ngăn xếp đã trống không chưa.
 
-    ![Linklist](./images/stack.PNG)
+    ![Linklist](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/stack.png?raw=true)
 
 ### 1.1.Hàm kiểm tra ngăn xếp đầy
 
@@ -2353,7 +2356,7 @@ Cơ cấu của hàng đợi là vào ở một đầu, ra ở một đầu, ph�
 
 Hàng đợi còn được gọi là danh sách kiểu FIFO(First In First Out)
 
-![Linklist](./images/bai12_queue.PNG)
+![queue](image-1.png)
 
 **Các Phép Toán Cơ Bản trên Hàng Đợi**
 
@@ -2377,8 +2380,8 @@ Hàng đợi còn được gọi là danh sách kiểu FIFO(First In First Out)
 - biến thể của queue: 
     + có hai trường hợp queue rỗng: front = rear = -1(khi chưa gán data), rear = front(khi lấy hết data)
 
-  ![Linklist](./images/queue1.PNG)
-   ![Linklist](./images/queue2.PNG)
+  ![queue](image-2.png)
+   ![queue](https://github.com/langvt/C_Cpp_Advanced/blob/main/images/queue2.png?raw=true)
 
    <details>
 <summary>Ví dụ:</summary>
@@ -3152,6 +3155,17 @@ int main() {
 	
 ### Class là gì?
 - Class là một cấu trúc dữ liệu , nó bao gồm thuộc tính và hành vi của đối tượng
+là một phần trong OOP, một địn nghĩa chung của các object.
+
+Class gồm 2 phần: 
+- Thuộc tính(attribue/property);
+- phương thức(method, behavior). 
+
+là các trường dữ liệu mô tả thuộc tính và hành động của lớp
+
+Class thực chất là một kiểu dữ liệu do người lập trình định nghĩa
+
+Object(đối tượng): là một thực thể của Class
 - Object là 1 đối tượng có thuộc tính và hành vi được tạo ra từ class
 - Biến trong class gọi là `PROPERTY`.
 - Hàm trong class gọi là `METHOD`.
@@ -3226,12 +3240,12 @@ int main() {
 - Trong C++ có hai loại copy được tạo bởi hàm xây dựng đó là:
 	+ Shallow copy
 		+ Hàm xây dựng sao chép mặc định chỉ có thể tạo shallow copy.
-		+ hỉ các giá trị của các property được sao chép từ đối tượng gốc sang đối tượng mới.
+		+ chỉ các giá trị của các property được sao chép từ đối tượng gốc sang đối tượng mới.
 		+ Nếu các property là các con trỏ , sẽ chỉ sao chép địa chỉ của các con trỏ đó dẫn đến nếu 1 đối tượng bị thay đổi sẽ ảnh hưởng tới đối tượng khác
 
 	+ Deep copp
 		+ Deep copy tự động cấp phát bộ nhớ cho bản sao và sau đó sao chép giá trị thực cho bản sao
-		+ Điều này đảm bảo rằng các đối tượng không chia sẻ cùng một vùng nhớ.thay đổi dữ liệu trong một đối tượng không ảnh hưởng đến dữ liệu của đối tượng khác.
+		+ Điều này đảm bảo rằng các đối tượng không chia sẻ cùng một vùng nhớ. thay đổi dữ liệu trong một đối tượng không ảnh hưởng đến dữ liệu của đối tượng khác.
 
 <details>
 <summary>Ví dụ:</summary>
