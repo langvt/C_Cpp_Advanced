@@ -28,15 +28,15 @@ void duyet(NODE* head){
 
 //hàm thêm một node ở đầu DSLK
 
-void pushFront(NODE* *head, uint8_t value){
+void pushFront(NODE  **nextHead, uint8_t value){
    NODE *newNode = createNode(value);
 
-   if(*head == NULL){ // khi gia tri cua con tro ** head tức *head của con trỏ **head == null là không  trỏ đến địa chỉ của node nào trong danh sách
-      *head = newNode; // cập nhật con trỏ head trỏ vào địa chỉ của node mới
+   if(*nextHead == NULL){ // khi gia tri cua con tro ** head tức *head của con trỏ **head == null là không  trỏ đến địa chỉ của node nào trong danh sách
+      *nextHead = newNode; // cập nhật con trỏ head trỏ vào địa chỉ của node mới
    }
    else{
-       newNode -> next = *head;  //  con trỏ next của node mới sẽ trỏ đến node đằng sau                      
-      *head = newNode; // cập nhật con trỏ head trỏ vào địa chỉ của node mới 
+       newNode -> next = *nextHead;  //  con trỏ next của node mới sẽ trỏ đến node đằng sau                      
+      *nextHead = newNode; // cập nhật con trỏ head trỏ vào địa chỉ của node mới 
    
    }
   

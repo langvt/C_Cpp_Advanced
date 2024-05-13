@@ -15,6 +15,9 @@ int main(int argc, char const *argv[])
 
     printf("gia tri a: %d\n", a);
 
+    printf("gia tri cua bien ma ptr tro toi: %d\n", *ptr);
+
     printf("dia chi cua tong: %p\n", ptr);
+    printf("size off pointer: %d bytes\n", sizeof(ptr) );
     return 0;
 }

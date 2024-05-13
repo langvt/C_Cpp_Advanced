@@ -1,14 +1,11 @@
 #include <stdio.h>
 
 void tang1 (int a){
-    printf("gia tri cua a trong ham tang1: %d\n", a);
     a += 100;
-    printf("gia tri cua a trong tang1 sau khi thuc hien: %d\n", a);
     
 }
 
 void tang2(int *a){
-    printf("gia tri cua a truoc khi thuc hien tang2: %d\n", *a);
     *a += 100;
     
 }

@@ -6,6 +6,8 @@ void swap (int a, int b){
     int temp = a;
     a = b;
     b = temp;
+
+    printf("gia tri cua a: %d, b: %d trong swap sau khi thuc hien swap \n", a, b);
 }
 
 void swap2 (int *a, int *b){
@@ -23,7 +25,8 @@ int main(int argc, char const *argv[])
     printf("so1 = %d, diachi: %p\n", so1, &so1);
     printf("so2 = %d, diachi: %p\n", so2, &so2);
 
-    swap2(&so1, &so2);
+    //swap(so1,so2);
+   swap2(&so1, &so2);
     printf("so1: %d, so2: %d", so1, so2);
     return 0;
 }
