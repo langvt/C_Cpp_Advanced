@@ -2,57 +2,72 @@
 #include <string>
 
 using namespace std;
-class DoiTuong{
-    public:
-        string ten;
-        int tuoi;
-        int lop;
-        void NhapThongTin(string ten, int tuoi, int lop);
-        void HienThi();
-};
 
-    void DoiTuong :: NhapThongTin(string ten, int tuoi, int lop){
-        DoiTuong :: ten = ten;
-        DoiTuong ::lop = lop;
-        DoiTuong :: tuoi = tuoi;
-    }
+    /*  private: chi dung trong class doituong(class cha) va class con va doi tuong object cung khong the truy cap duoc
+        protected: class con co the ke thua nhung doi tuong object khong the truy cap duoc
+        public: cac class con va doi tuong object co the truy cap duoc */
 
-    void  DoiTuong ::HienThi(){
-        cout << "day la class DoiTuong:\n";
-        cout <<"ten: " <<ten<<endl;
-        cout <<"tuoi: " <<tuoi <<endl;
-        cout <<"lop: " <<lop <<endl;
-    }
-// class SinhVien ke thua va ghi de class DoiTuong 
-class SinhVien :public DoiTuong{
-        public:
-            int msv;
-            void NhapThongTin(string ten, int tuoi, int lop, int msv); 
-            void HienThi();
-};
-
- void SinhVien :: NhapThongTin(string ten, int tuoi, int lop, int msv){
-        SinhVien :: ten = ten;
-        SinhVien ::lop = lop;
-        SinhVien :: tuoi = tuoi;
-        SinhVien :: msv = msv;
-    }
-
-    void  SinhVien ::HienThi(){
-        cout << "day la class DoiTuong:\n";
-        cout <<"ten: " <<ten<<endl;
-        cout <<"tuoi: " <<tuoi <<endl;
-        cout <<"lop: " <<lop <<endl;
-        cout <<"msv: " <<msv <<endl;
-    }
-
-int main(int argc, char const *argv[])
+class DoiTuong 
 {
-    SinhVien sv1;
 
-    sv1.NhapThongTin("Hoang", 17, 11, 202060456);
-    sv1.HienThi();
-    return 0;
+    protected:
+        string Ten;
+        int Tuoi;
+        string GioiTinh;
+
+    public:
+        void setThongTin(string ten, string gioitinh, int tuoi);
+        void hienthi();
+};
+
+void DoiTuong :: setThongTin(string ten, string gioitinh, int tuoi)
+{
+    Ten = ten;
+    GioiTinh = gioitinh;
+    Tuoi = tuoi;
 }
 
+void DoiTuong :: hienthi()
+{
+    cout << "Ten: " << Ten<< endl;
+    cout << "gioi tinh: " << GioiTinh<< endl;
+    cout <<"tuoi: "<< Tuoi << endl;
+}
 
+class SinhVien : public DoiTuong
+{
+    private: 
+         int MSSV;
+
+    public:
+        void setThongTin(string ten, string gioitinh, int tuoi, int mssv);
+        void hienthi();
+};
+
+
+void SinhVien :: setThongTin(string ten, string gioitinh, int tuoi, int mssv)
+{
+    Ten = ten;
+    GioiTinh = gioitinh;
+    Tuoi = tuoi;
+    MSSV = mssv;
+}
+
+void SinhVien :: hienthi()
+{
+    cout << "Ten: " << Ten<< endl;
+    cout << "gioi tinh: " << GioiTinh<< endl;
+    cout <<"tuoi: "<< Tuoi << endl;
+    cout << "ma so: " << MSSV << endl;
+}
+int main ()
+{
+    DoiTuong dt1;
+    dt1.setThongTin("x", "nam", 10);
+    dt1 .hienthi();
+    cout << endl;
+
+    SinhVien sv1;
+    sv1 .setThongTin("y", "nu", 11, 101);
+    sv1 .hienthi();
+}

@@ -1,0 +1,31 @@
+- Constructor: hàm khởi tạo tự động được tạo khi khai bao một đối tượng, ta cũng có thể tạo một hàm khởi tạo có tham số và không có tham số.
+
+- Destructor: hàm hủy được gọi khi ctrinh đối được đã được gọi kết thúc.
+
+- con trỏ this: là con trỏ của class trỏ để các thành viên của class đó, ta sử dụng nó để có thể phân biệt được các thành viên của class với các tham số khi chúng có tên trùng nhau
+
+- Biến static trong OOP: giá trị dùng chung và nếu có tăng và giảm tại 1 đối tượng thì giá trị đó cũng thay đổi theo cho cả class không riêng đối tượng nào.
+ 	+ khai báo trong private đảm bảo tính đóng gói và phải được khởi tạo ở ngoài nhưng vẫn trong phạm vi class
+
+- Hàm bạn: không phải là thuộc tính hoặc phươnhg thức của class đó nhưng vẫn có thể truy cập vào các thuộc tính như một phương thước của class đó 
+	+ khai báo với từ khóa friend void name(nameclass)
+- Lớp bạn (friend class): có thể truy cập vào một class khác mà vẫn có thể đảm bảo tính đóng gói của class đó, và sửa đổi thông tin .. của class được truy cập
+	
+- Tính đóng gói(encapsulation): các thuộc tính được truy cập bởi phương thức trong class đó và các class khác không được truy cập vào. khi đó thì các phương thức sẽ có thể lấy ra giá trị của thuộc tính để các class khác sử dụng mà không truy cập trực tiếp và thuộc tính của class này
+	+ khi đó thì thuộc tính để private hoặc protected
+
+- Tính kế thừa(inheritance): 1 class con sẽ kế thừa các thuộc tính và phương thức của class cha đã có trước mà class con đó vẫn có thể phát triển thêm các thuộc tính và phương thức khác 
+	+ classcon : public / private /protected classcha
+	+ phải trong mối quan hệ "is - a" mới có thể sử dụng tính đa hình, vidu classcon là student và classcha là person thì khi đó có thể sử dụng tính kế thừa, ngược lại thì classdog không thể kế thừa class person
+	+ access mode:  
+		public: các thuộc tính và phương thứ  của lớp con sẽ giống với lớp cha về phạm vi(access modifier)
+		private: khi đó các thuộc tính và phương thức của lớp cha sẽ thành private của lớp con, tức là access modifier của lơp con là private cả thuộc tính và phương thức
+		protected: các thành phần public của lớp cha sẽ thành protected của lớp con khi được kế thừa
+	+ ghi đè:  định nghĩa lại các phương thức cho phù hợp với class con khi đã kế thừa từ class cha
+	+ class con không thể truy cập trực tiếp đc vào thuộc tính của class cha mà phải lấy giá trị từ phương thức từ class cha để đảm bảo tính đóng gói mặc dù đã kế thừa
+ 
+	+ khi kế thừa thì sẽ tạo constructor và destructo như sau:
+		constructor: classcha() -> classcon
+		destructor: classcha() -> classcon() -> ~classcon() -> ~classcha()
+ 	+ mutilevel inheritan: khi gọi một hàm mà classcon kế từ từ classcha nó có tên giống nhau thì nó sẽ ưu tiên gọi hàm từ classcon trước
+	+ mutiple inheritant(1 classcon kế từ từ 2 classcha) thì khi muốn gọi hàm thì phải sử dụg toán tử phạm vi: ojt1.A/Bclass::getthongtin();
